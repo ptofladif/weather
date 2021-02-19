@@ -70,7 +70,7 @@ app.get('*',(req,res) => {
     res.render('404',{});
 })
 
-app.listen(3000,()=>{
+app.listen(5000,()=>{
     console.log('O servidor iniciou');
 })
 
