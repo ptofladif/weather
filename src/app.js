@@ -6,6 +6,8 @@ const forecast = require('./utils/forecast');
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 const publicPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
@@ -70,7 +72,7 @@ app.get('*',(req,res) => {
     res.render('404',{});
 })
 
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log('O servidor iniciou');
 })
 
